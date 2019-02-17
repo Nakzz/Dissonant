@@ -1,7 +1,9 @@
 # Dissonant	
 Web Dev Repo for Dissonant Magazine	
 
- Refer to this tutorial for more help: https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website	
+ Refer to these tutorial for more help: 
+ - https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website	
+ - https://www.youtube.com/watch?v=oLGiSBy7u68
 
  ## Instructions for development	
 1. Clone repo	
