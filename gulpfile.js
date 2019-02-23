@@ -83,7 +83,7 @@ gulp.task('build-js', function () {
         .pipe(uglify())
         .pipe(concat('script.js'))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./pulic/javascripts/'))
+        .pipe(gulp.dest('./public/javascripts/'))
 });
 
 
