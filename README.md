@@ -8,10 +8,10 @@ Web Dev Repo for Dissonant Magazine
  ## Instructions for development	
 1. Clone repo	
 2. Run `npm install`	
-3. Run `DEBUG=express-locallibrary-tutorial:* npm run devstart` 	
+3. Run `npm run devstart` 	
 
 ## Instruction for Realtime developing
-- Run `DEBUG=express-locallibrary-tutorial:* npm run devstart` 
+- Run `npm run devstart` 
 
 This utilizes GULP watch sequence and NPM nodemon package that automatically builds and refresh pages on edit.
 
