@@ -8,6 +8,11 @@ Web Dev Repo for Dissonant Magazine
 2. Run `npm install`	
 3. Run `DEBUG=express-locallibrary-tutorial:* npm run devstart` 	
 
+## Instruction for Realtime developing
+- Run `DEBUG=express-locallibrary-tutorial:* npm run devstart` 
+
+This utilizes GULP watch sequence and NPM nodemon package that automatically builds and refresh pages on edit.
+
  This setup will automatically save the files as you save files.	
 
  ## Getting Help	
