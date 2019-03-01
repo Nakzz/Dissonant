@@ -5,7 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var constructionRouter = require('./routes/construction');
+
 
 var app = express();
 
@@ -21,8 +22,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //ROUTES OF ALL THE PAGES
+//TODO: fix references to actual page instead of constructionRouter
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/issues', constructionRouter);
+app.use('/about-us', constructionRouter);
+app.use('/get-involved', constructionRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

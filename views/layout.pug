@@ -6,7 +6,7 @@ html
     meta(name="author",content="Ajmain Naqib")
     meta(name="description" , content= description)
     meta(property="og:type" content="website")
-    title= title
+    title= "Dissonant Magazine: " + title
 
     link(href='images/favicon.png' rel='shortcut icon')
     link(rel='stylesheet', href='/stylesheets/style.css')
@@ -24,7 +24,10 @@ html
 
     include navbar
 
-    include header
+    if title == "Home"
+      include header
+    
+    
     main
       block content
       include footer

@@ -15037,6 +15037,15 @@ main {
 
 /** This is a dynamically generated file **/
 /** This is a dynamically generated file **/
+.construction {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #f03a37;
+  transition-delay: 0.8s; }
+
 #name {
   color: green; }
 
