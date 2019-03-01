@@ -8,7 +8,7 @@ html
     meta(property="og:type" content="website")
     title= title
 
-     link(href='images/favicon.png' rel='shortcut icon')
+    link(href='images/favicon.png' rel='shortcut icon')
     link(rel='stylesheet', href='/stylesheets/style.css')
     
   body
@@ -24,10 +24,10 @@ html
 
     include navbar
 
-
-    block content
-
-//- script(src='/javascripts/script.js')
+    include header
+    main
+      block content
+      include footer
 
 script(src='javascripts/jquery.min.js')
 script(src='javascripts/bootstrap.min.js')
