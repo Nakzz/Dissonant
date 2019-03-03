@@ -878,11 +878,11 @@ a {
 
     h2 {
         font-size: 8vw;
-        color: #fff;
+        color: $white;
         font-weight: 800;
         margin-bottom: 40px;
         text-transform: uppercase;
-        text-shadow: 2px 2px $secondaryColorRED;
+        text-shadow: 8px 8px $secondaryColorRED;
     }
 
     .btn-ghost {
