@@ -17,5 +17,5 @@ This utilizes GULP watch sequence and NPM nodemon package that automatically bui
 
  This setup will automatically save the files as you save files.	
 
- ## Getting Help	
+ ## Getting Help 	
 Email: naqib@wisc.edu
