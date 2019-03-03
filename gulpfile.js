@@ -21,6 +21,7 @@ gulp.task('sass', function () {
         .pipe(concat('style.css'))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./public/stylesheets'))
+        return gulp.dest('./public/stylesheets')
 });
 
 
