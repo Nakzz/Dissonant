@@ -4886,12 +4886,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: #007bff;
+  color: #fff;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #0056b3;
+    color: #fff;
     text-decoration: underline; }
   a:not([href]):not([tabindex]) {
     color: inherit;
@@ -12904,12 +12904,7 @@ img {
 
 /* LINKS */
 a {
-  color: #313434;
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -ms-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out; }
+  color: #fff; }
 
 /* TRANSITION OVERLAY */
 .transition-overlay {
@@ -15036,15 +15031,130 @@ main {
     transform: rotate(10deg) scale(1.2); }
 
 /** This is a dynamically generated file **/
+footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative; }
+
 /** This is a dynamically generated file **/
 .construction {
-  width: 0;
-  height: 100%;
-  position: absolute;
+  width: 100%;
+  position: relative;
   left: 0;
   top: 0;
-  background: #f03a37;
-  transition-delay: 0.8s; }
+  background: #e07f7e;
+  transition-delay: 0.8s;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px 40px;
+  padding-bottom: 20px; }
+
+.constructionColor {
+  transition: all 3s;
+  background: #f03a37 !important; }
+
+.construction h2 {
+  font-size: 6vw;
+  font-weight: 800;
+  line-height: 1; }
+
+.button {
+  border: none;
+  background-color: #022644;
+  padding: 20px 55px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.19);
+  color: #fff;
+  text-transform: uppercase;
+  margin-left: 50%;
+  margin-top: 45px;
+  cursor: pointer;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 34px;
+  font-family: "Libre Baskerville", serif; }
+
+svg#pennello {
+  width: 130px; }
+
+.vernice {
+  fill: none;
+  stroke: #f03a37;
+  stroke-width: 211px;
+  stroke-dasharray: 525px;
+  stroke-dashoffset: 460px;
+  transition: all 3s; }
+
+.verniceOver {
+  stroke-dashoffset: 0px; }
+
+.brush {
+  transform: translateY(-456px);
+  transition: all 3s; }
+
+.brushOver {
+  transform: translateY(0px); }
+
+.gocce {
+  opacity: 0;
+  transition: all 1s; }
+
+.gocceOver {
+  opacity: 1;
+  transition-delay: 3s; }
+
+.st0 {
+  fill: none;
+  stroke: #FF5886;
+  stroke-width: 201;
+  stroke-miterlimit: 10; }
+
+.st2 {
+  fill: none; }
+
+.st3 {
+  fill: none;
+  stroke: #282828;
+  stroke-width: 5.908;
+  stroke-linecap: round;
+  stroke-miterlimit: 10; }
+
+.st4 {
+  fill: #FF0086; }
+
+.st5 {
+  fill: #FF5886; }
+
+.st6 {
+  fill: #FF7486; }
+
+.st7 {
+  fill: none;
+  stroke: #282828;
+  stroke-width: 11.8159;
+  stroke-miterlimit: 10; }
+
+.st8 {
+  fill: #53D398; }
+
+.st9 {
+  fill: #439B6F; }
+
+.st10 {
+  fill: none;
+  stroke: #282828;
+  stroke-width: 2.954;
+  stroke-miterlimit: 10; }
+
+.construction p {
+  display: block;
+  color: #fff;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 34px;
+  margin: 0;
+  font-family: "Libre Baskerville", serif; }
 
 #name {
   color: green; }
