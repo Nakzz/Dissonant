@@ -23,6 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //ROUTES OF ALL THE PAGES
 //TODO: fix references to actual page instead of constructionRouter
+
 //app.use('/', indexRouter);
 app.use('/', constructionRouter);
 app.use('/issues', constructionRouter);
