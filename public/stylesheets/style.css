@@ -13144,7 +13144,7 @@ img {
 
 /* LINKS */
 a {
-  color: #022644;
+  color: #CDDDDD;
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;
   -ms-transition: 0.25s ease-in-out;
@@ -13590,7 +13590,7 @@ a {
     .navbar .logo a {
       float: left; }
       .navbar .logo a img {
-        height: 50px; }
+        height: 150px; }
   .navbar .sandwich-nav {
     margin-right: 0; }
     .navbar .sandwich-nav .sandwich-text {
@@ -14930,7 +14930,7 @@ main {
   .navbar {
     padding: 30px 25px; }
     .navbar .logo a img {
-      height: 40px; }
+      height: 150px; }
   .soundbar {
     display: none; }
   .navigation-menu.open address {
