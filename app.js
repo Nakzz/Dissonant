@@ -23,8 +23,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //ROUTES OF ALL THE PAGES
 //TODO: fix references to actual page instead of constructionRouter
+<<<<<<< HEAD
  app.use('/', indexRouter);
 //app.use('/', constructionRouter);
+=======
+app.use('/', indexRouter);
+// app.use('/', constructionRouter);
+>>>>>>> 361e55719632674f1bd8fd211222eced79e69ca3
 app.use('/issues', constructionRouter);
 app.use('/about-us', constructionRouter);
 app.use('/get-involved', constructionRouter);
