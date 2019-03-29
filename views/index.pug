@@ -64,12 +64,19 @@ block content
 
     // end works
     section.side-content-block.bg-image(data-background='images/side-image01.jpg')
-      .container
+      .container.wow.fadeIn
         .inner
+          h2 SIGN-UP TO GET UPDATES
           .holder.wow.fadeIn
-            p
-              | TODO: Add newsletter micro service here
-            h6 form
+            form(method='POST', action='/post-newsletter')
+              label
+                | Name:
+                input(type='text', name='newsletter-name', required='')
+              label
+                | Email:
+                input(type='text', name='newsletter-email', required='')
+              br
+              input(type='submit', value='Submit')
           // end holder
         // end inner
       // end container

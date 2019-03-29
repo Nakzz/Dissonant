@@ -3,10 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var bodyParser = require('body-parser');
+var mongodb = require('mongodb');
 
 var indexRouter = require('./routes/index');
 var constructionRouter = require('./routes/construction');
 
+//connect to database
+var dbConn = mongodb.MongoClient.connect('mongodb://localhost:27017');
 
 var app = express();
 
@@ -19,6 +23,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
+
 
 
 //ROUTES OF ALL THE PAGES
@@ -48,5 +56,18 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+//newsletter microservice
+app.post('/post-newsletter', function (req, res) {
+  dbConn.then(function (db) {
+    delete req.body._id; // for safety reasons
+    db.collection('newsletter').insertOne(req.body);
+    console.log("Inserted")
+    console.log(req.body)
+  });
+  res.send('Data received:\n' + JSON.stringify(req.body));
+});
+
+
 
 module.exports = app;
