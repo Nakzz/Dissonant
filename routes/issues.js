@@ -8,20 +8,37 @@ issuesObject = {
       "id": "1",
       "title": "Where are you from?",
       "publishedDate" : "07/10/2019",
-      "filename" : "test.pdf",
+      "filename" : "/test.pdf",
       "previewImage" : "/images/issues/test.png"
   },
     "2": {
         "id": "2",
         "title": "Issue 2",
         "publishedDate": "07/10/2019",
-        "filename": "test.pdf",
+        "filename": "/test.pdf",
         "previewImage": "/images/issues/test.png"
     }
 }
 
+
+
+/* GET Issues page rendering */
+router.get('/', function (req, res, next) {
+
+    let issueId = (req.query.id);
+
+console.log(issueId, typeof(issueId))
+
+let currentIssue = issuesObject[issueId];
+
+    if (currentIssue) {
+        // res.render('issuesViewer', {
+        //     title: 'Issues',
+        //     issueTitle: currentIssue["title"]
+        // });
+
 // Loading file from file system into typed array
-var pdfPath = process.argv[2] || '/web/compressed.tracemonkey-pldi-09.pdf';
+var pdfPath = process.argv[2] || '/compressed.tracemonkey-pldi-09.pdf';
 
 // Will be using promises to load document, pages and misc data instead of
 // callback.
@@ -78,20 +95,11 @@ loadingTask.promise.then(function (doc) {
     console.error('Error: ' + err);
 });
 
-/* GET Issues page rendering */
-router.get('/', function (req, res, next) {
-
-    let issueId = (req.query.id);
-
-console.log(issueId, typeof(issueId))
-
-let currentIssue = issuesObject[issueId];
-
-    if (currentIssue) {
-        res.render('issuesViewer', {
-            title: 'Issues',
-            issueTitle: currentIssue["title"]
-        });
+                res.render('viewer', {
+                    title: 'Issues',
+                    issueTitle: currentIssue["title"],
+                    issueFilename: currentIssue["filename"]
+                });
     } else {
                    res.render('issues', {
                        title: 'Issues',
