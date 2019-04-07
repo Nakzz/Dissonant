@@ -1,0 +1,37 @@
+
+extends layout
+
+block content
+  mainIssues
+    section.works
+      .container
+        .works-title.wow.fadeIn
+          if issueTitle
+            h2= "ISSUES: " + issueTitle
+          else 
+            h2= "ISSUES "
+       
+          p
+            | TODO: get a paragraph from content team.
+
+        ul.works-grid
+          unless issueTitle
+            each issue in issuesObject
+              li.wow.fadeIn(data-wow-delay='0s')
+                figure
+                  //- a(href='/web/viewer.html?file=compressed.tracemonkey-pldi-09.pdf')
+                  a(href='/issues?id='+ issue.id )
+                    img(src='images/works01.jpg' alt='Image') 
+                    // TODO: change this to a resized and compressed image
+                  figcaption
+                    span
+                    small= issue.publishedDate
+                    h3= issue.title
+       
+        // end container
+      // end clients
+
+    // end main
+
+    //- include footer
+
