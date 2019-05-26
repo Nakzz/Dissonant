@@ -15161,6 +15161,27 @@ main {
   transition-delay: 0.04s, 0.08s;
   right: 10px; }
 
+.pdfNav {
+  width: 50%;
+  position: absolute;
+  left: -30px;
+  top: 110px;
+  z-index: 9;
+  padding: 30px 40px;
+  font-family: "Libre Baskerville", serif;
+  transform: translateY(-100%);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  transition-duration: 500ms;
+  -webkit-transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+  transition-delay: 0.8s; }
+
+.pdfLogo {
+  max-width: 100px; }
+
 /** This is a dynamically generated file **/
 .construction {
   width: 100%;

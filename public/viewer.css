@@ -27,19 +27,23 @@ html {
 
 header {
   background-color: #f4f4f4;
+  z-index: 100;
+  position: relative;
 }
 
 header h1 {
   border-bottom: 1px solid #d8d8d8;
-  color: #858585;
-  font-size: 23px;
+  /* color: #858585;*/
+ 
   font-style: italic;
-  font-weight: normal;
+  font-weight: normal; 
+   font-size: 3rem;
   overflow: hidden;
-  padding: 10px;
-  text-align: center;
+  padding: 20px;
+  /* text-align: center; */
   text-overflow: ellipsis;
   white-space: nowrap;
+   text-align: right;
 }
 
 body {

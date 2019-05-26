@@ -2,23 +2,24 @@ var express = require('express');
 var router = express.Router();
 var pdfjsLib = require('pdfjs-dist');
 
+var issuesObject = require('../issuesContext.js')
 //Issue
-issuesObject = {
-  "1" : {
-      "id": "1",
-      "title": "Where are you from?",
-      "publishedDate" : "07/10/2019",
-      "filename": "/issues/WAYF.pdf",
-      "previewImage" : "/images/issues/test.jpg"
-  },
-    "2": {
-        "id": "2",
-        "title": "Issue 2",
-        "publishedDate": "07/10/2019",
-        "filename": "/test.pdf",
-        "previewImage": "/images/issues/test.jpg"
-    }
-}
+// issuesObject = {
+//   "1" : {
+//       "id": "1",
+//       "title": "Where are you from?",
+//       "publishedDate" : "07/10/2019",
+//       "filename": "/issues/WAYF.pdf",
+//       "previewImage" : "/images/issues/test.jpg"
+//   },
+//     "2": {
+//         "id": "2",
+//         "title": "Issue 2",
+//         "publishedDate": "07/10/2019",
+//         "filename": "/test.pdf",
+//         "previewImage": "/images/issues/test.jpg"
+//     }
+// }
 
 
 

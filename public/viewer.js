@@ -334,6 +334,17 @@ var PDFViewerApplication = {
       PDFViewerApplication.zoomOut();
     });
 
+    document.addEventListener('keydown', function (event) {
+      if (event.code == 'ArrowDown' ||
+        event.code == 'ArrowRight') {
+        PDFViewerApplication.page++;
+      }
+      if (event.code == 'ArrowUp' || event.code == 'ArrowLeft') {
+        PDFViewerApplication.page--;
+      }
+
+    });
+
     // document.getElementById('pageNumber').addEventListener('click', function() {
     //   this.select();
     // });

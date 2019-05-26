@@ -6018,6 +6018,7 @@
 
               if (this.canvas && this.maxCanvasPixels > 0) {
                 var outputScale = this.outputScale;
+                console.log(outputScale)
 
                 if ((Math.floor(this.viewport.width) * outputScale.sx | 0) * (Math.floor(this.viewport.height) * outputScale.sy | 0) > this.maxCanvasPixels) {
                   isScalingRestricted = true;
@@ -6334,20 +6335,24 @@
 
               canvasWrapper.appendChild(canvas);
               this.canvas = canvas;
+              console.log(this.canvas)
               canvas.mozOpaque = true;
               var ctx = canvas.getContext('2d', {
                 alpha: false
               });
               var outputScale = (0, _ui_utils.getOutputScale)(ctx);
+              
               this.outputScale = outputScale;
 
               if (this.useOnlyCssZoom) {
                 var actualSizeViewport = viewport.clone({
                   scale: _ui_utils.CSS_UNITS
                 });
-                outputScale.sx *= actualSizeViewport.width / viewport.width;
+                outputScale.sx *= (actualSizeViewport.width / viewport.width);
                 outputScale.sy *= actualSizeViewport.height / viewport.height;
                 outputScale.scaled = true;
+
+                console.log(outputScale.sx)
               }
 
               if (this.maxCanvasPixels > 0) {
@@ -6370,6 +6375,9 @@
               canvas.height = (0, _ui_utils.roundToDivide)(viewport.height * outputScale.sy, sfy[0]);
               canvas.style.width = (0, _ui_utils.roundToDivide)(viewport.width, sfx[1]) + 'px';
               canvas.style.height = (0, _ui_utils.roundToDivide)(viewport.height, sfy[1]) + 'px';
+
+              console.log([canvas.width, canvas.height, canvas.style.width, canvas.style.height]);
+
               this.paintedViewportMap.set(canvas, viewport);
               var transform = !outputScale.scaled ? null : [outputScale.sx, 0, 0, outputScale.sy, 0, 0];
               var renderContext = {
