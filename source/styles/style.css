@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /*
 
 @Author: Themezinho
@@ -430,12 +430,13 @@ a {
 
 /* SANDWICH BUTTON */
 .sandwich-btn {
-  width: 22px;
-  height: 22px;
-  float: left;
-  position: relative;
-  cursor: pointer;
+    width: 22px;
+    height: 22px;
+    float: left;
+    position: relative;
+    cursor: pointer
 }
+
 .sandwich-btn span {
   display: block;
   height: 2px;
@@ -620,6 +621,7 @@ a {
 .navbar .sandwich-nav {
   margin-right: 0;
 }
+    
 .navbar .sandwich-nav .sandwich-text {
   float: left;
   height: 46px;
