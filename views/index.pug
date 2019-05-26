@@ -12,14 +12,17 @@ block content
         // end works-title
       // end container
       ul.works-grid
-        li.wow.fadeIn(data-wow-delay='0s')
-          figure
-            a(href='works-single.html')
-              img(src='images/works01.jpg' alt='Image')
-            figcaption
-              span
-              small TODO: PUT DATE OF PUBLISHMENT
-              h3 Where are you from?
+        each issue in issuesObject
+          li.wow.fadeIn(data-wow-delay='0s')
+            figure
+              //- a(href='/web/viewer.html?file=compressed.tracemonkey-pldi-09.pdf')
+              a(href='/issues?id='+ issue.id )
+                img(src=issue.previewImage alt='Image') 
+                // TODO: change this to a resized and compressed image
+              figcaption
+                span
+                small= issue.publishedDate
+                h3= issue.title
         //- li.wow.fadeIn(data-wow-delay='0.1s')
         //-   figure
         //-     a(href='works-single.html')
@@ -61,19 +64,20 @@ block content
               small e-Commerce &amp; UI UX Design
               h3 Eventer
 
+    //-TODO: finish this
 
-    // end works
-    section.side-content-block.bg-image(data-background='images/side-image01.jpg')
-      .container
-        .inner
-          .holder.wow.fadeIn
-            p
-              | TODO: Add newsletter micro service here
-            h6 form
-          // end holder
-        // end inner
-      // end container
-    // end side-content-block
+    //- // end works
+    //- section.side-content-block.bg-image(data-background='images/side-image01.jpg')
+    //-   .container
+    //-     .inner
+    //-       .holder.wow.fadeIn
+    //-         p
+    //-           | TODO: Add newsletter micro service here
+    //-         h6 form
+    //-       // end holder
+    //-     // end inner
+    //-   // end container
+    //- // end side-content-block
 
 
     //- section#odometer.awards
