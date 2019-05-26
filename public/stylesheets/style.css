@@ -4886,12 +4886,12 @@ sup {
   top: -.5em; }
 
 a {
-  color: #007bff;
+  color: #fff;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #0056b3;
+    color: #fff;
     text-decoration: underline; }
   a:not([href]):not([tabindex]) {
     color: inherit;
@@ -13144,12 +13144,7 @@ img {
 
 /* LINKS */
 a {
-  color: #CDDDDD;
-  -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
-  -ms-transition: 0.25s ease-in-out;
-  -o-transition: 0.25s ease-in-out;
-  transition: 0.25s ease-in-out; }
+  color: #fff; }
 
 /* TRANSITION OVERLAY */
 .transition-overlay {
