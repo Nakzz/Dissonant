@@ -16,12 +16,36 @@ head
   title PDF.js viewer
   script(type='text/javascript').
         var DEFAULT_URL = "#{issueFilename}" ;
+        var FILETITLE = "#{issueTitle}";
   link(rel='stylesheet' href='/web/pdf_viewer.css')
-  link(rel='stylesheet' type='text/css' href='viewer.css')
+  link(href='/images/favicon.png' rel='shortcut icon')
+  link(rel='stylesheet' type='text/css' href='/viewer.css')
+  link(rel='stylesheet', href='/stylesheets/style.css')
+
   script(src='/build/pdf.js')
   script(src='/web/pdf_viewer.js')
 header
   h1#title
+button#previous.toolbarButton.prev-arrow(title='Previous Page')
+button#next.toolbarButton.next-arrow(title='Next Page')
+
+
+.wrapper 
+  //- input#pageNumber.toolbarField.pageNumber(type='number' value='1' size='4' min='1')
+  //- p.toolbarField.pageNumber(type='number' value='1' size='4' min='1')
+  svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24').elem#zoomIn(title='Zoom In  ')
+    path(d='M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z')
+
+  svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24').elem#zoomOut(title='Zoom Out')
+    path(d='M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-12v-2h12v2z')
+
+    //- .elem= ''
+    //- .elem= 'E'
+    //- .elem= 'M'
+    //- .elem= 'E'
+    //- .elem= 'N'
+    //- .elem= 'T'
+
 #viewerContainer
   #viewer.pdfViewer
 #loadingBar
@@ -39,10 +63,10 @@ header
       | Close
   .clearBoth
   textarea#errorMoreInfo(hidden='true' readonly='readonly')
-footer
-  button#previous.toolbarButton.pageUp(title='Previous Page')
-  button#next.toolbarButton.pageDown(title='Next Page')
-  input#pageNumber.toolbarField.pageNumber(type='number' value='1' size='4' min='1')
-  button#zoomOut.toolbarButton.zoomOut(title='Zoom Out')
-  button#zoomIn.toolbarButton.zoomIn(title='Zoom In')
-script(src='viewer.js')
+ 
+//- footer
+  
+  //- input#pageNumber.toolbarField.pageNumber(type='number' value='1' size='4' min='1')
+  //- button#zoomOut.toolbarButton.zoomOut(title='Zoom Out')
+  //- button#zoomIn.toolbarButton.zoomIn(title='Zoom In')
+script(src='/viewer.js')

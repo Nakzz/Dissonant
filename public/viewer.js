@@ -22,7 +22,7 @@ if (!pdfjsLib.getDocument || !pdfjsViewer.PDFViewer) {
 
 var USE_ONLY_CSS_ZOOM = true;
 var TEXT_LAYER_MODE = 0; // DISABLE
-var MAX_IMAGE_SIZE = 1024 * 1024;
+var MAX_IMAGE_SIZE = 1024 * 1024 * 25;
 var CMAP_URL = '/cmaps/';
 var CMAP_PACKED = true;
 
@@ -30,6 +30,8 @@ pdfjsLib.GlobalWorkerOptions.workerSrc =
   '/build/pdf.worker.js';
 
 // var DEFAULT_URL = '/test.pdf';
+
+
 var DEFAULT_SCALE_DELTA = 1.1;
 var MIN_SCALE = 0.25;
 var MAX_SCALE = 10.0;
@@ -58,7 +60,7 @@ var PDFViewerApplication = {
 
     var url = params.url;
     var self = this;
-    this.setTitleUsingUrl(url);
+    this.setTitleUsingUrl(FILETITLE);
 
     console.log("SETTING TITTLE ", url)
     // Loading document.
@@ -332,21 +334,21 @@ var PDFViewerApplication = {
       PDFViewerApplication.zoomOut();
     });
 
-    document.getElementById('pageNumber').addEventListener('click', function() {
-      this.select();
-    });
+    // document.getElementById('pageNumber').addEventListener('click', function() {
+    //   this.select();
+    // });
 
-    document.getElementById('pageNumber').addEventListener('change',
-        function() {
-      PDFViewerApplication.page = (this.value | 0);
+    // document.getElementById('pageNumber').addEventListener('change',
+    //     function() {
+    //   PDFViewerApplication.page = (this.value | 0);
 
-      // Ensure that the page number input displays the correct value,
-      // even if the value entered by the user was invalid
-      // (e.g. a floating point number).
-      if (this.value !== PDFViewerApplication.page.toString()) {
-        this.value = PDFViewerApplication.page;
-      }
-    });
+    //   // Ensure that the page number input displays the correct value,
+    //   // even if the value entered by the user was invalid
+    //   // (e.g. a floating point number).
+    //   if (this.value !== PDFViewerApplication.page.toString()) {
+    //     this.value = PDFViewerApplication.page;
+    //   }
+    // });
 
     document.addEventListener('pagesinit', function () {
       // We can use pdfViewer now, e.g. let's change default scale.
@@ -357,7 +359,7 @@ var PDFViewerApplication = {
       var page = evt.detail.pageNumber;
       var numPages = PDFViewerApplication.pagesCount;
 
-      document.getElementById('pageNumber').value = page;
+      // document.getElementById('pageNumber').value = page;
       document.getElementById('previous').disabled = (page <= 1);
       document.getElementById('next').disabled = (page >= numPages);
     }, true);
