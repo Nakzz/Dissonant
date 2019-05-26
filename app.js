@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var constructionRouter = require('./routes/construction');
-
+var issuesRouter = require('./routes/issues');
 
 var app = express();
 
@@ -19,14 +19,29 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+console.log("STATIC PATH IS: " + (path.join(__dirname, 'public')));
+// app.use(express.static('public'))
 
 
 //ROUTES OF ALL THE PAGES
 //TODO: fix references to actual page instead of constructionRouter
 
-//app.use('/', indexRouter);
-app.use('/', constructionRouter);
-app.use('/issues', constructionRouter);
+ app.use('/', indexRouter);
+//app.use('/', constructionRouter);
+app.use('/issues', issuesRouter);
+// app.get('issues/:id', (req, res) => {
+//  var issueId = req.param.id;
+//  var issueTitle = `Issue Testing ${issueId}`
+//  console.log({
+//    issueId,
+//    issueTitle
+//  })
+//  res.render('issues', {
+//    title: 'Issues',
+//    issueTitle: issueTitle
+//  });
+// });
+
 app.use('/about-us', constructionRouter);
 app.use('/get-involved', constructionRouter);
 
@@ -49,5 +64,11 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+// const port = process.env.port || 3000;
+// app.listen(port, () => {
+//   console.log(`Listening on port ${port}`);
+// })
 
 module.exports = app;
