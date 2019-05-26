@@ -25,6 +25,7 @@ console.log("STATIC PATH IS: " + (path.join(__dirname, 'public')));
 
 //ROUTES OF ALL THE PAGES
 //TODO: fix references to actual page instead of constructionRouter
+
  app.use('/', indexRouter);
 //app.use('/', constructionRouter);
 app.use('/issues', issuesRouter);
@@ -40,6 +41,7 @@ app.use('/issues', issuesRouter);
 //    issueTitle: issueTitle
 //  });
 // });
+
 app.use('/about-us', constructionRouter);
 app.use('/get-involved', constructionRouter);
 
