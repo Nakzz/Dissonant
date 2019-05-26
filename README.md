@@ -8,14 +8,14 @@ Web Dev Repo for Dissonant Magazine
  ## Instructions for development	
 1. Clone repo	
 2. Run `npm install`	
-3. Run `npm run devstart` 	
+3. Run `nodemon` or `npm run devstart` . 
+
+`nodemon` watches the files for changes and refreshes where as `npm run devstart` should incorporate SASS compiling using Gulp. But current isn't working. Issue has been created. 
 
 ## Instruction for Realtime developing
-- Run `npm run devstart` 
+- Run `nodemon` in root directory 
 
-This utilizes GULP watch sequence and NPM nodemon package that automatically builds and refresh pages on edit.
-
- This setup will automatically save the files as you save files.	
+ This setup will automatically save the files as you save files (only nodejs files, not styles or javascript).	
 
 
 ## Server Deployment
