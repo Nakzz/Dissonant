@@ -6,53 +6,56 @@ block content
     section.works
       .container
         .works-title.wow.fadeIn
-          h2 SHOWCASES
+          h2 ISSUES
           p
-            | We create digital experiences for brands communicating the unique services provided to your customers. Creativity for us something personal.
+            | TODO: get a paragraph from content team.
         // end works-title
       // end container
       ul.works-grid
-        li.wow.fadeIn(data-wow-delay='0s')
-          figure
-            a(href='works-single.html')
-              img(src='images/works01.jpg' alt='Image')
-            figcaption
-              span
-              small Mobile App &amp; UI-UX Design
-              h3 Start Engine
-        li.wow.fadeIn(data-wow-delay='0.1s')
-          figure
-            a(href='works-single.html')
-              img(src='images/works02.jpg' alt='Image')
-            figcaption
-              span
-              small Corporate website &amp; e-Commerce
-              h3 Kitchen
-        li.wow.fadeIn(data-wow-delay='0.2s')
-          figure
-            a(href='works-single.html')
-              img(src='images/works03.jpg' alt='Image')
-            figcaption
-              span
-              small UI-UX Design &amp; Mobile App
-              h3 Line Up
-        li.wow.fadeIn(data-wow-delay='0s')
-          figure
-            a(href='works-single.html')
-              img(src='images/works04.jpg' alt='Image')
-            figcaption
-              span
-              small Corporate website &amp; Mobile App
-              h3 Moviester
-        li.wow.fadeIn(data-wow-delay='0.1s')
-          figure
-            a(href='works-single.html')
-              img(src='images/works05.jpg' alt='Image')
-            figcaption
-              span
-              small Mobile App &amp; Website
-              h3 QBS Bank
-        li.wow.fadeIn(data-wow-delay='0.2s')
+        each issue in issuesObject
+          li.wow.fadeIn(data-wow-delay='0s')
+            figure
+              //- a(href='/web/viewer.html?file=compressed.tracemonkey-pldi-09.pdf')
+              a(href='/issues?id='+ issue.id )
+                img(src=issue.previewImage alt='Image') 
+                // TODO: change this to a resized and compressed image
+              figcaption
+                span
+                small= issue.publishedDate
+                h3= issue.title
+        //- li.wow.fadeIn(data-wow-delay='0.1s')
+        //-   figure
+        //-     a(href='works-single.html')
+        //-       img(src='images/works02.jpg' alt='Image')
+        //-     figcaption
+        //-       span
+        //-       small Corporate website &amp; e-Commerce
+        //-       h3 Kitchen
+        //- li.wow.fadeIn(data-wow-delay='0.2s')
+        //-   figure
+        //-     a(href='works-single.html')
+        //-       img(src='images/works03.jpg' alt='Image')
+        //-     figcaption
+        //-       span
+        //-       small UI-UX Design &amp; Mobile App
+        //-       h3 Line Up
+        //- li.wow.fadeIn(data-wow-delay='0s')
+        //-   figure
+        //-     a(href='works-single.html')
+        //-       img(src='images/works04.jpg' alt='Image')
+        //-     figcaption
+        //-       span
+        //-       small Corporate website &amp; Mobile App
+        //-       h3 Moviester
+        //- li.wow.fadeIn(data-wow-delay='0.1s')
+        //-   figure
+        //-     a(href='works-single.html')
+        //-       img(src='images/works05.jpg' alt='Image')
+        //-     figcaption
+        //-       span
+        //-       small Mobile App &amp; Website
+        //-       h3 QBS Bank
+        //- li.wow.fadeIn(data-wow-delay='0.2s')
           figure
             a(href='works-single.html')
               img(src='images/works06.jpg' alt='Image')
@@ -60,126 +63,98 @@ block content
               span
               small e-Commerce &amp; UI UX Design
               h3 Eventer
-    // end works
-    section.side-content-block.bg-image(data-background='images/side-image01.jpg')
-      .container
-        .inner
-          .holder.wow.fadeIn
-            p
-              | We create digital experiences for brands communicating the unique services provided to your customers. Creativity for us something personal.
-            h6 verno.digital
-          // end holder
-        // end inner
-      // end container
-    // end side-content-block
-    section#odometer.awards
-      .container
-        .row
-          .col-lg-7.text-center
-            .row.inner
-              .col-4.wow.fadeIn
-                figure
-                  img(src='images/awards01.png' alt='Image')
-                span#1.odometer
-                small +
-              // end col-4
-              .col-4.wow.fadeIn(data-wow-delay='0.1s')
-                figure
-                  img(src='images/awards02.png' alt='Image')
-                span#2.odometer
-                small %
-              // end col-4
-              .col-4.wow.fadeIn(data-wow-delay='0.2s')
-                figure
-                  img(src='images/awards03.png' alt='Image')
-                span#3.odometer
-                small k
-              // end col-4
-            // end row inner
-          // end col-7
-          .col-lg-5.text-right.wow.fadeIn(data-wow-delay='0.3s')
-            h4 Reach goals and keep working
-            p
-              | We split between creative strategies and digital experiences, finding strong messages and visual essence
-          // end col-5
-        // end row
-      // end container
-    // end awards
-    section.icon-content-block
-      .content-box.wow.fadeIn(data-wow-delay='0s')
-        figure
-          img(src='images/icon01.png' alt='Image')
-        h4 CMS Development
-        p The slide out menu came to life right with as a popular option for mobile
-        a(href='#')
-          img(src='images/icon-dots.svg' alt='Image')
-      // end content-box
-      .content-box.wow.fadeIn(data-wow-delay='0.1s')
-        figure
-          img(src='images/icon02.png' alt='Image')
-        h4 Mobile Applications
-        p The slide out menu came to life right with as a popular option for mobile
-        a(href='#')
-          img(src='images/icon-dots.svg' alt='Image')
-      // end content-box
-      .content-box.wow.fadeIn(data-wow-delay='0.2s')
-        figure
-          img(src='images/icon03.png' alt='Image')
-        h4 User Interface Designs
-        p The slide out menu came to life right with as a popular option for mobile
-        a(href='#')
-          img(src='images/icon-dots.svg' alt='Image')
-      // end content-box
-      .content-box.wow.fadeIn(data-wow-delay='0.3s')
-        figure
-          img(src='images/icon04.png' alt='Image')
-        h4 Software Solutions
-        p The slide out menu came to life right with as a popular option for mobile
-        a(href='#')
-          img(src='images/icon-dots.svg' alt='Image')
-      // end content-box
-    // end icon-content-block
+
+    //-TODO: finish this
+
+    //- // end works
+    //- section.side-content-block.bg-image(data-background='images/side-image01.jpg')
+    //-   .container
+    //-     .inner
+    //-       .holder.wow.fadeIn
+    //-         p
+    //-           | TODO: Add newsletter micro service here
+    //-         h6 form
+    //-       // end holder
+    //-     // end inner
+    //-   // end container
+    //- // end side-content-block
+
+
+    //- section#odometer.awards
+    //-   .container
+    //-     .row
+    //-       .col-lg-7.text-center
+    //-         .row.inner
+    //-           .col-4.wow.fadeIn
+    //-             figure
+    //-               img(src='images/awards01.png' alt='Image')
+    //-             span#1.odometer
+    //-             small +
+    //-           // end col-4
+    //-           .col-4.wow.fadeIn(data-wow-delay='0.1s')
+    //-             figure
+    //-               img(src='images/awards02.png' alt='Image')
+    //-             span#2.odometer
+    //-             small %
+    //-           // end col-4
+    //-           .col-4.wow.fadeIn(data-wow-delay='0.2s')
+    //-             figure
+    //-               img(src='images/awards03.png' alt='Image')
+    //-             span#3.odometer
+    //-             small k
+    //-           // end col-4
+    //-         // end row inner
+    //-       // end col-7
+    //-       .col-lg-5.text-right.wow.fadeIn(data-wow-delay='0.3s')
+    //-         h4 Reach goals and keep working
+    //-         p
+    //-           | We split between creative strategies and digital experiences, finding strong messages and visual essence
+    //-       // end col-5
+    //-     // end row
+    //-   // end container
+    //- // end awards
+   
     section.clients
       .container.wow.fadeIn
-        h6 We offer the world&rsquo;s leading brands premium digital solutions
+        h6 TODO: Get a line from content team
         h2 PARTNERS
         ul
           li.wow.fadeIn(data-wow-delay='0s')
             figure
               img(src='images/logo01.png' alt='Image')
-              h6 Sleep In Genoa
-          li.wow.fadeIn(data-wow-delay='0.1s')
-            figure
-              img(src='images/logo02.png' alt='Image')
-              h6 Korum
-          li.wow.fadeIn(data-wow-delay='0.2s')
-            figure
-              img(src='images/logo03.png' alt='Image')
-              h6 Kura
-          li.wow.fadeIn
-            figure
-              img(src='images/logo04.png' alt='Image')
-              h6 Maison Rasmi
-          li.wow.fadeIn
-            figure
-              img(src='images/logo05.png' alt='Image')
-              h6 Melrose
-          li.wow.fadeIn
-            figure
-              img(src='images/logo06.png' alt='Image')
-              h6 Encore Autos
-          li.wow.fadeIn
-            figure
-              img(src='images/logo07.png' alt='Image')
-              h6 Market Trade
-          li.wow.fadeIn
-            figure
-              img(src='images/logo08.png' alt='Image')
-              h6 Medusis
-          li.wow.fadeIn
-            figure
-              img(src='images/logo09.png' alt='Image')
-              h6 Healty Habits
+              h6 AlTX 
+          //- li.wow.fadeIn(data-wow-delay='0.1s')
+          //-   figure
+          //-     img(src='images/logo02.png' alt='Image')
+          //-     h6 Korum
+          //- li.wow.fadeIn(data-wow-delay='0.2s')
+          //-   figure
+          //-     img(src='images/logo03.png' alt='Image')
+          //-     h6 Kura
+          //- li.wow.fadeIn
+          //-   figure
+          //-     img(src='images/logo04.png' alt='Image')
+          //-     h6 Maison Rasmi
+          //- li.wow.fadeIn
+          //-   figure
+          //-     img(src='images/logo05.png' alt='Image')
+          //-     h6 Melrose
+          //- li.wow.fadeIn
+          //-   figure
+          //-     img(src='images/logo06.png' alt='Image')
+          //-     h6 Encore Autos
+          //- li.wow.fadeIn
+          //-   figure
+          //-     img(src='images/logo07.png' alt='Image')
+          //-     h6 Market Trade
+          //- li.wow.fadeIn
+          //-   figure
+          //-     img(src='images/logo08.png' alt='Image')
+          //-     h6 Medusis
+          //- li.wow.fadeIn
+          //-   figure
+          //-     img(src='images/logo09.png' alt='Image')
+          //-     h6 Healty Habits
         // end container
       // end clients
 

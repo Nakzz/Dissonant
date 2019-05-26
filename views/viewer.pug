@@ -1,0 +1,80 @@
+doctype html
+//
+  Copyright 2016 Mozilla Foundation
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  http://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+  title PDF.js viewer
+  script(type='text/javascript').
+        var DEFAULT_URL = "#{issueFilename}" ;
+        var FILETITLE = "#{issueTitle}";
+  link(rel='stylesheet' href='/web/pdf_viewer.css')
+  link(href='/images/favicon.png' rel='shortcut icon')
+  link(rel='stylesheet' type='text/css' href='/viewer.css')
+  link(rel='stylesheet', href='/stylesheets/style.css')
+
+  script(src='/build/pdf.js')
+  script(src='/web/pdf_viewer.js')
+header
+  h1#title
+  nav.pdfNav
+    .pdfLogo
+      a(href='/')
+        img(src='./../images/logo.png' alt='Image')
+    // end logo
+
+
+
+button#previous.toolbarButton.prev-arrow(title='Previous Page')
+button#next.toolbarButton.next-arrow(title='Next Page')
+
+
+.wrapper 
+  //- input#pageNumber.toolbarField.pageNumber(type='number' value='1' size='4' min='1')
+  //- p.toolbarField.pageNumber(type='number' value='1' size='4' min='1')
+  svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24').elem#zoomIn(title='Zoom In  ')
+    path(d='M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z')
+
+  svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24').elem#zoomOut(title='Zoom Out')
+    path(d='M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-12v-2h12v2z')
+
+    //- .elem= ''
+    //- .elem= 'E'
+    //- .elem= 'M'
+    //- .elem= 'E'
+    //- .elem= 'N'
+    //- .elem= 'T'
+
+#viewerContainer
+  #viewer.pdfViewer
+#loadingBar
+  .progress
+  .glimmer
+#errorWrapper(hidden='true')
+  #errorMessageLeft
+    span#errorMessage
+    button#errorShowMore
+      | More Information
+    button#errorShowLess
+      | Less Information
+  #errorMessageRight
+    button#errorClose
+      | Close
+  .clearBoth
+  textarea#errorMoreInfo(hidden='true' readonly='readonly')
+ 
+//- footer
+  
+  //- input#pageNumber.toolbarField.pageNumber(type='number' value='1' size='4' min='1')
+  //- button#zoomOut.toolbarButton.zoomOut(title='Zoom Out')
+  //- button#zoomIn.toolbarButton.zoomIn(title='Zoom In')
+script(src='/viewer.js')
