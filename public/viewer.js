@@ -50,6 +50,7 @@ var PDFViewerApplication = {
    *                      is opened.
    */
   open: function(params) {
+
     if (this.pdfLoadingTask) {
       // We need to destroy already opened document
       return this.close().then(function () {
@@ -85,6 +86,7 @@ var PDFViewerApplication = {
 
       self.loadingBar.hide();
       self.setTitleUsingMetadata(pdfDocument);
+      
     }, function (exception) {
       var message = exception && exception.message;
       var l10n = self.l10n;
@@ -342,6 +344,7 @@ var PDFViewerApplication = {
       if (event.code == 'ArrowUp' || event.code == 'ArrowLeft') {
         PDFViewerApplication.page--;
       }
+
 
     });
 
