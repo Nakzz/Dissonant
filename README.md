@@ -17,5 +17,17 @@ This utilizes GULP watch sequence and NPM nodemon package that automatically bui
 
  This setup will automatically save the files as you save files.	
 
+
+## Server Deployment
+In the server, the node process is monitored used pm2 process manager. Use the following command to 
+   <br/> <br/> List the process
+   - `pm2 list`
+   
+   Stop a process
+   - `pm2 stop [id]`
+   
+   Start a process
+   - `pm2 start npm -- start`
+
  ## Getting Help 	
 Email: naqib@wisc.edu
