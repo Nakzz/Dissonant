@@ -13760,7 +13760,8 @@ a {
     display: inline-block;
     border-radius: 54px;
     border-bottom: 4px solid rgba(0, 0, 0, 0.2);
-    background: url(../images/btn-bg.jpg);
+    border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+    background-color: #f03a37;
     background-size: cover;
     color: #fff;
     font-weight: 800;
