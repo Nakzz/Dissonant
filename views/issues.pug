@@ -4,15 +4,15 @@ extends layout
 block content
   mainIssues
     section.works
-      .container
+      .container.container-pad
         .works-title.wow.fadeIn
           if issueTitle
             h2= "ISSUES: " + issueTitle
           else 
             h2= "ISSUES "
        
-          p
-            | TODO: get a paragraph from content team.
+          //- p
+          //-   | TODO: get a paragraph from content team.
 
         ul.works-grid
           unless issueTitle

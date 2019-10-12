@@ -24,6 +24,7 @@ head
 
   script(src='/build/pdf.js')
   script(src='/web/pdf_viewer.js')
+  
 header
   h1#title
   nav.pdfNav
@@ -47,12 +48,6 @@ button#next.toolbarButton.next-arrow(title='Next Page')
   svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24').elem#zoomOut(title='Zoom Out')
     path(d='M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-12v-2h12v2z')
 
-    //- .elem= ''
-    //- .elem= 'E'
-    //- .elem= 'M'
-    //- .elem= 'E'
-    //- .elem= 'N'
-    //- .elem= 'T'
 
 #viewerContainer
   #viewer.pdfViewer
@@ -78,3 +73,6 @@ button#next.toolbarButton.next-arrow(title='Next Page')
   //- button#zoomOut.toolbarButton.zoomOut(title='Zoom Out')
   //- button#zoomIn.toolbarButton.zoomIn(title='Zoom In')
 script(src='/viewer.js')
+script(src='/javascripts/disableRightClick.js')
+
+

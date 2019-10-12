@@ -1,4 +1,5 @@
 module.exports = issuesObject = {
+    //TODO, this will be fetching from API information about the issues
     "1": {
         "id": "1",
         "title": "Where are you from?",
