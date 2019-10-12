@@ -98,7 +98,7 @@ gulp.task('build-js', function () {
 
 
 gulp.task('watch', function () {
-    gulp.watch('./source/styles/**/!(_all).scss', ['app_build_css']);
+    gulp.watch('./source/styles/**/!(_all).scss', gulp.series('sass') );
     // gulp.watch('./source/scripts/*.js', ['build-js']);
 });
 
