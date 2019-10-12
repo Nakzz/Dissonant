@@ -13760,7 +13760,8 @@ a {
     display: inline-block;
     border-radius: 54px;
     border-bottom: 4px solid rgba(0, 0, 0, 0.2);
-    background: url(../images/btn-bg.jpg);
+    border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+    background-color: #f03a37;
     background-size: cover;
     color: #fff;
     font-weight: 800;
@@ -15181,7 +15182,8 @@ main {
   top: 110px;
   z-index: 9;
   padding: 30px 40px;
-  font-family: "Libre Baskerville", serif;
+  font-family: "Libre Baskerville",
+ serif;
   transform: translateY(-100%);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -15231,7 +15233,8 @@ main {
   font-size: 26px;
   font-weight: 300;
   line-height: 34px;
-  font-family: "Libre Baskerville", serif; }
+  font-family: "Libre Baskerville",
+ serif; }
 
 svg#pennello {
   width: 130px; }
